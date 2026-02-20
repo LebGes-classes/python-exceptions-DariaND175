@@ -72,6 +72,7 @@ class Product:
 
         try:
             count = int(count)
+
             if count <= 0:
                 print('Введите положительное число.')
 
@@ -121,6 +122,7 @@ class Product:
                 print('Цена должна быть целым числом.')
 
                 self.__cost = 0
+
                 return
 
             cost = int(cost)
@@ -162,9 +164,11 @@ class Product:
                 self.__region = 0
         except ValueError:
             print('Введите корректное число.')
+
             self.__region = 0
         except TypeError:
             print('Ошибка типа данных.')
+
             self.__region = 0
 
     def set_category(self, category: str) -> None:
@@ -318,7 +322,7 @@ class Product:
         Args:
             color: Цвет товара."""
 
-        colors = ('Красный', 'Жёлтый','Зелёный','Оранжевый','Синий','Голубой','Фиолетовый')
+        colors = ('Красный', 'Жёлтый','Зелёный','Оранжевый','Синий','Голубой','Фиолетовый','Розовый')
 
         if color.capitalize() in colors:
             self.__color = color.capitalize()
@@ -490,6 +494,7 @@ class Product:
                 print('Ошибка. Слишком большое значение.')
             else:
                 new_count = self.get_count() + number_increase
+
                 self.set_count(new_count)
         except ValueError:
             print('Введите корректное число.')
